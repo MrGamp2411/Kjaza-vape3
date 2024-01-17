@@ -1,200 +1,225 @@
-body {
-    margin: 0;
-    background: linear-gradient(180deg, rgba(255, 179, 0, 1) 0%, rgba(255, 255, 255, 1) 30%);
-    height: 100vh;
-    display: grid;
-    place-items: center;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    background-color: transparent;
-    z-index: 1000;
-}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJAZA</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: transparent;
+            z-index: 1000;
+        }
 
-#logo {
-    width: 50%;
-    height: auto;
-    margin-left: 35px;
-    cursor: pointer;
-}
+        #logo {
+            width: 50%;
+            height: auto;
+            margin-left: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
-.main {
-    position: relative;
-    overflow: hidden;
-    border-radius: 50px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
-}
+<body>
 
-.main span {
-    position: absolute;
-    background: linear-gradient(to right, #ff7700, #ffaf00);
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo" id="logo">
+        </a>
+    </header>
 
-.main span:nth-child(1) {
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    animation-name: animate1;
-}
+    <div class="main">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="card">
+            <form>
+                <h2 class="title">Log in</h2>
+                <p class="subtitle">Don't have an account? <a href="#">Sign Up</a></p>
+                <br />
+                <div class="email-login">
+                    <label>Email</label>
+                    <input type="text" placeholder="Enter Email">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter Password">
+                </div>
+                <button class="cta-btn">
+                    Log In
+                </button>
+                <a class="forgot-pass" href="#">Forgot password?</a>
+            </form>
+        </div>
+    </div>
 
-@keyframes animate1 {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, rgba(255, 179, 0, 1) 0%, rgba(255, 255, 255, 1) 30%);
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
 
-.main span:nth-child(2) {
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 3px;
-    animation-name: animate2;
-    animation-delay: 1s;
-}
+        .main {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+        }
 
-@keyframes animate2 {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100%);
-    }
-}
+        .main span {
+            position: absolute;
+            background: linear-gradient(to right, #ff7700, #ffaf00);
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
 
-.main span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    height: 3px;
-    width: 100%;
-    animation-name: animate3;
-}
+        .main span:nth-child(1) {
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            animation-name: animate1;
+        }
 
-@keyframes animate3 {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+        @keyframes animate1 {
+            0% {
+                transform: translateX(-100%);
+            }
 
-.main span:nth-child(4) {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    animation-name: animate4;
-    animation-delay: 1s;
-}
+            100% {
+                transform: translateX(100%);
+            }
+        }
 
-@keyframes animate4 {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}
+        .main span:nth-child(2) {
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 3px;
+            animation-name: animate2;
+            animation-delay: 1s;
+        }
 
-a {
-    text-decoration: none;
-    color: #ff7700;
-}
+        @keyframes animate2 {
+            0% {
+                transform: translateY(-100%);
+            }
 
-.card {
-    font-family: sans-serif;
-    width: 80%;
-    border-radius: 50px;
-    background-color: transparent;
-    padding: 1.8rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-}
+            100% {
+                transform: translateY(100%);
+            }
+        }
 
-.title {
-    text-align: center;
-    color: #ff7700;
-    margin: 0;
-}
+        .main span:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            height: 3px;
+            width: 100%;
+            animation-name: animate3;
+        }
 
-.subtitle {
-    text-align: center;
-    color: white;
-}
+        @keyframes animate3 {
+            0% {
+                transform: translateX(100%);
+            }
 
-.email-login {
-    display: flex;
-    flex-direction: column;
-}
+            100% {
+                transform: translateX(-100%);
+            }
+        }
 
-.email-login label {
-    color: #ff7700;
-    margin-top: 10px;
-}
+        .main span:nth-child(4) {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            animation-name: animate4;
+            animation-delay: 1s;
+        }
 
-input[type="text"],
-input[type="password"] {
-    padding: 15px 20px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
+        @keyframes animate4 {
+            0% {
+                transform: translateY(100%);
+            }
 
-.cta-btn {
-    background-color: #ff7700;
-    color: white;
-    padding: 18px 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-radius: 10px;
-    border: none;
-}
+            100% {
+                transform: translateY(-100%);
+            }
+        }
 
-.forgot-pass {
-    text-align: center;
-    display: block;
-}
+        a {
+            text-decoration: none;
+            color: #ff7700;
+        }
 
-/* Aggiunta una media query per centrare il logo solo per dispositivi mobili */
-@media only screen and (max-width: 600px) {
-    #logo {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
+        .card {
+            font-family: sans-serif;
+            width: 80%;
+            border-radius: 50px;
+            background-color: transparent;
+            padding: 1.8rem;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        }
 
-    .card {
-        width: 90%;
-    }
+        .title {
+            text-align: center;
+            color: #ff7700;
+            margin: 0;
+        }
 
-    .title,
-    .subtitle,
-    .email-login label {
-        text-align: center;
-    }
+        .subtitle {
+            text-align: center;
+            color: white;
+        }
 
-    input[type="text"],
-    input[type="password"] {
-        width: 100%;
-        box-sizing: border-box;
-    }
+        .email-login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .cta-btn,
-    .forgot-pass {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
+        .email-login label {
+            color: #ff7700;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 15px 20px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: #ff7700;
+            color: white;
+            padding: 18px 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .forgot-pass {
+            text-align: center;
+            display: block;
+        }
+
+        /* Aggiunta una media query per centrare il logo solo per dispositivi mobili */
+        @media only screen and (max-width: 600px) {
+            #logo {
+                width: 70%;
+                margin-left: auto;
+                margin
