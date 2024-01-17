@@ -1,21 +1,32 @@
 body {
     margin: 0;
-    background: rgb(255, 179, 0);
-    background: linear-gradient(180deg, rgba(255, 179, 0, 1) 0%, rgba(255, 255, 255, 1) 60%);
+    background: linear-gradient(180deg, rgba(255, 179, 0, 1) 0%, rgba(255, 255, 255, 1) 30%);
     height: 100vh;
     display: grid;
     place-items: center;
 }
 
-:root {
-    --font-color: #ff7700;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+#logo {
+    width: 50%;
+    height: auto;
+    margin-left: 35px;
+    cursor: pointer;
 }
 
 .main {
     position: relative;
     overflow: hidden;
-    border-radius: 50px 0px 50px 0px;
-    box-shadow: 0 80px 160px rgba(0, 0, 0, 0.4); /* Aumentato l'ombra 4 volte */
+    border-radius: 50px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
 }
 
 .main span {
@@ -98,21 +109,21 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--font-color);
+    color: white; /* Modificato il colore del testo */
 }
 
 .card {
     font-family: sans-serif;
-    width: 300px;
-    border-radius: 50px 0px 50px 0px;
+    width: 80%;
+    border-radius: 50px;
     background-color: transparent;
     padding: 1.8rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); /* Aumentato il blur per l'ombra */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
 .title {
     text-align: center;
-    color: var(--font-color);
+    color: white;
     margin: 0;
 }
 
@@ -127,7 +138,7 @@ a {
 }
 
 .email-login label {
-    color: var(--font-color);
+    color: white;
     margin-top: 10px;
 }
 
@@ -141,7 +152,7 @@ input[type="password"] {
 }
 
 .cta-btn {
-    background-color: var(--font-color);
+    background-color: #ff7700; /* Modificato il colore del pulsante */
     color: white;
     padding: 18px 20px;
     margin-top: 10px;
