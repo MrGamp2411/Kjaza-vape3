@@ -1,36 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Animated Border Login Form </title>
-	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <title>Animated Border Login Form</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <!-- Aggiunto stile per la logo nell'angolo in alto a sinistra -->
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: transparent; /* Imposta lo sfondo del header come trasparente */
+            z-index: 1000;
+        }
+
+        #logo {
+            width: 30%; /* Imposta la larghezza del tuo logo al 30% di quella originale */
+            height: auto;
+            margin-left: 35px; /* Aggiunge un margine sinistro di 35px al logo */
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
+<!-- Aggiunto il tag header per contenere l'immagine del logo -->
+<header>
+    <!-- Aggiunto l'immagine del logo con un link a index.html -->
+    <a href="index.html">
+        <img src="images/logo.png" alt="Logo" id="logo">
+    </a>
+</header>
+
 <div class="main">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	<div class="card">
-		<form>
-			<h2 class="title">Log in</h2>
-			<p class="subtitle">Don't have an account? <a href="#">sign Up</a></p>
-			<br/>
-			<div class="email-login">
-				<label>Email</label>
-				<input type="text" placeholder="Enter Email">
-				<label>Password</label>
-				<input type="password" placeholder="Enter Password">
-			</div>
-			<button class="cta-btn">
-				Log In
-			</button>
-			<a class="forgot-pass" href="#">Forgot password?</a>
-		</form>
-	</div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="card">
+        <form>
+            <h2 class="title">Log in</h2>
+            <p class="subtitle">Don't have an account? <a href="#">sign Up</a></p>
+            <br/>
+            <div class="email-login">
+                <label>Email</label>
+                <input type="text" placeholder="Enter Email">
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password">
+            </div>
+            <button class="cta-btn">
+                Log In
+            </button>
+            <a class="forgot-pass" href="#">Forgot password?</a>
+        </form>
+    </div>
 </div>
-
-
 
 </body>
 </html>

@@ -1,110 +1,157 @@
-body{
-	margin: 0;
-	background: rgb(255,179,0);
-	background: linear-gradient(180deg, rgba(255,179,0,1) 0%, rgba(255,255,255,1) 60%);
-	height: 100vh;
-	display: grid;
-	place-items:center;
+body {
+    margin: 0;
+    background: rgb(255, 179, 0);
+    background: linear-gradient(180deg, rgba(255, 179, 0, 1) 0%, rgba(255, 255, 255, 1) 60%);
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
-:root{
-	--font-color:#ff7700;
+
+:root {
+    --font-color: #ff7700;
 }
-.main{
-	position: relative;
-	overflow: hidden;
-	border-radius: 50px 0px 50px 0px;
+
+.main {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 0 80px 160px rgba(0, 0, 0, 0.4); /* Aumentato l'ombra 4 volte */
 }
-.main span:nth-child(1){
-	position: absolute;
-	top: 0;
-	right: 0;
-width: 100%;
-	height: 3px;
-	background: linear-gradient(to right, #412b05, #956b08);
-	animation: animate1 2s linear infinite;
+
+.main span {
+    position: absolute;
+    background: linear-gradient(to right, #ff7700, #ffaf00);
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
-@keyframes animate1{
-	0%{transform: translateX(-100%);}
-	100%{transform: translateX(100%);}
+
+.main span:nth-child(1) {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    animation-name: animate1;
 }
-.main span:nth-child(2){
-	position: absolute;
-	top: 0;
-	right: 0;
-height: 100%;
-	width: 3px;
-	background: linear-gradient(to bottom, #412d05, #412e05);
-	animation: animate2 2s linear infinite;
-	animation-delay: 1s;
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
-@keyframes animate2{
-	0%{transform: translateY(-100%);}
-	100%{transform: translateY(100%);}
+
+.main span:nth-child(2) {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    animation-name: animate2;
+    animation-delay: 1s;
 }
-.main span:nth-child(3){
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	height: 3px;
-	width: 100%;
-	background: linear-gradient(to left, #838321, #78740a);
-	animation: animate3 2s linear infinite;
-	
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
-@keyframes animate3{
-	0%{transform: translateX(100%);}
-	100%{transform: translateX(-100%);}
+
+.main span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    height: 3px;
+    width: 100%;
+    animation-name: animate3;
 }
-.main span:nth-child(4){
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 3px;
-	background: linear-gradient(to top, #c9c200, #72780a);
-	animation: animate4 2s linear infinite;
-	animation-delay: 1s;
-	
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
-@keyframes animate4{
-	0%{transform: translateY(100%);}
-	100%{transform: translateY(-100%);}
+
+.main span:nth-child(4) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    animation-name: animate4;
+    animation-delay: 1s;
 }
-a{text-decoration: none; color: var(--font-color);}
-.card{
-	font-family: sans-serif;
-	width: 300px;
-	border-radius: 50px 0px 50px 0px;
-	background-color: transparent;
-	padding: 1.8rem;
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
 }
-.title{
-	text-align: center;
-	color: var(--font-color);
-	margin: 0;
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
 }
-.subtitle{text-align: center; color: white}
-.email-login{display: flex; flex-direction: column;}
-.email-login label{color: var(--font-color); margin-top: 10px;}
+
+.card {
+    font-family: sans-serif;
+    width: 300px;
+    border-radius: 50px 0px 50px 0px;
+    background-color: transparent;
+    padding: 1.8rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); /* Aumentato il blur per l'ombra */
+}
+
+.title {
+    text-align: center;
+    color: var(--font-color);
+    margin: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+}
+
+.email-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-login label {
+    color: var(--font-color);
+    margin-top: 10px;
+}
+
 input[type="text"],
-input[type="password"]{
-	padding: 15px 20px;
-	margin-top: 8px;
-	margin-bottom: 15px;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
+input[type="password"] {
+    padding: 15px 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
-.cta-btn{
-	background-color:var(--font-color);
-	color: white;
-	padding: 18px 20px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	width: 100%;
-	border-radius: 10px;
-	border: none;
+
+.cta-btn {
+    background-color: var(--font-color);
+    color: white;
+    padding: 18px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
 }
-.forgot-pass{
-	text-align: center;
-	display: block;
+
+.forgot-pass {
+    text-align: center;
+    display: block;
 }
