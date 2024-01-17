@@ -167,6 +167,7 @@ input[type="password"] {
     display: block;
 }
 
+/* Aggiunta una media query per centrare il logo solo per dispositivi mobili */
 @media only screen and (max-width: 600px) {
     #logo {
         width: 70%;
@@ -177,5 +178,23 @@ input[type="password"] {
 
     .card {
         width: 90%;
+    }
+
+    .title,
+    .subtitle,
+    .email-login label {
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cta-btn,
+    .forgot-pass {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
