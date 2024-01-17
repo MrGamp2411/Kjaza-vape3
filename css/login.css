@@ -109,7 +109,7 @@ header {
 
 a {
     text-decoration: none;
-    color: #ff7700;
+    color: #ff7700; /* Mantenuto il colore originale del testo */
 }
 
 .card {
@@ -123,7 +123,7 @@ a {
 
 .title {
     text-align: center;
-    color: #ff7700;
+    color: #ff7700; /* Mantenuto il colore originale del testo */
     margin: 0;
 }
 
@@ -138,7 +138,7 @@ a {
 }
 
 .email-login label {
-    color: #ff7700;
+    color: #ff7700; /* Mantenuto il colore originale del testo */
     margin-top: 10px;
 }
 
@@ -152,7 +152,7 @@ input[type="password"] {
 }
 
 .cta-btn {
-    background-color: #ff7700;
+    background-color: #ff7700; /* Mantenuto il colore originale del pulsante */
     color: white;
     padding: 18px 20px;
     margin-top: 10px;
@@ -167,34 +167,13 @@ input[type="password"] {
     display: block;
 }
 
-/* Aggiunta una media query per centrare il logo solo per dispositivi mobili */
+/* Aggiunta una media query per adattarsi a dispositivi più piccoli */
 @media only screen and (max-width: 600px) {
     #logo {
         width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
     }
 
     .card {
         width: 90%;
-    }
-
-    .title,
-    .subtitle,
-    .email-login label {
-        text-align: center;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .cta-btn,
-    .forgot-pass {
-        width: 100%;
-        box-sizing: border-box;
     }
 }
