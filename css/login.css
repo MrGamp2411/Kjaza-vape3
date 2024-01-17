@@ -1,12 +1,13 @@
 body{
 	margin: 0;
-	background: #0d1021;
+	background: rgb(255,179,0);
+	background: linear-gradient(180deg, rgba(255,179,0,1) 0%, rgba(255,255,255,1) 60%);
 	height: 100vh;
 	display: grid;
 	place-items:center;
 }
 :root{
-	--font-color:#FFB233;
+	--font-color:#ff7700;
 }
 .main{
 	position: relative;
@@ -19,7 +20,7 @@ body{
 	right: 0;
 width: 100%;
 	height: 3px;
-	background: linear-gradient(to right, #2e0541, #870895);
+	background: linear-gradient(to right, #412b05, #956b08);
 	animation: animate1 2s linear infinite;
 }
 @keyframes animate1{
@@ -32,7 +33,7 @@ width: 100%;
 	right: 0;
 height: 100%;
 	width: 3px;
-	background: linear-gradient(to bottom, #2e0541, #2e0541);
+	background: linear-gradient(to bottom, #412d05, #412e05);
 	animation: animate2 2s linear infinite;
 	animation-delay: 1s;
 }
@@ -46,7 +47,7 @@ height: 100%;
 	right: 0;
 	height: 3px;
 	width: 100%;
-	background: linear-gradient(to left, #215b83, #0a5b78);
+	background: linear-gradient(to left, #838321, #78740a);
 	animation: animate3 2s linear infinite;
 	
 }
@@ -60,7 +61,7 @@ height: 100%;
 	left: 0;
 	height: 100%;
 	width: 3px;
-	background: linear-gradient(to top, #009fc9, #0a5b78);
+	background: linear-gradient(to top, #c9c200, #72780a);
 	animation: animate4 2s linear infinite;
 	animation-delay: 1s;
 	
