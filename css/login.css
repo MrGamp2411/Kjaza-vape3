@@ -156,33 +156,38 @@ input[type="password"] {
     display: block;
 }
 
-/* Il tuo stile CSS originale rimane qui */
+/* Aggiunto il codice per responsive design con media queries */
+@media only screen and (max-width: 600px) {
+    body {
+        height: auto;
+    }
 
-/* Modifiche per migliorare la mobile friendliness */
-body {
-    height: auto;
-}
+    .main {
+        border-radius: 0;
+        box-shadow: none;
+    }
 
-.main {
-    border-radius: 0;
-    box-shadow: none;
-}
+    .main span {
+        display: none;
+    }
 
-.main span {
-    display: none;
-}
+    .card {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1.2rem; /* Aggiunto padding per migliorare la spaziatura interna */
+    }
 
-.card {
-    width: 80%;
-    margin: 0 auto;
-}
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px; /* Adattato il padding degli input */
+        margin-top: 8px;
+        margin-bottom: 15px;
+        width: calc(100% - 20px); /* Calcolato la larghezza degli input considerando il padding */
+        box-sizing: border-box;
+    }
 
-input[type="text"],
-input[type="password"] {
-    padding: 10px 15px;
-}
-
-.cta-btn {
-    padding: 14px 15px;
-    border-radius: 8px;
+    .cta-btn {
+        padding: 14px;
+        border-radius: 8px;
+    }
 }
