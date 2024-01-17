@@ -109,7 +109,7 @@ header {
 
 a {
     text-decoration: none;
-    color: white; /* Modificato il colore del testo */
+    color: #ff7700; /* Mantenuto il colore originale del testo */
 }
 
 .card {
@@ -123,7 +123,7 @@ a {
 
 .title {
     text-align: center;
-    color: white;
+    color: #ff7700; /* Mantenuto il colore originale del testo */
     margin: 0;
 }
 
@@ -138,7 +138,7 @@ a {
 }
 
 .email-login label {
-    color: white;
+    color: #ff7700; /* Mantenuto il colore originale del testo */
     margin-top: 10px;
 }
 
@@ -152,7 +152,7 @@ input[type="password"] {
 }
 
 .cta-btn {
-    background-color: #ff7700; /* Modificato il colore del pulsante */
+    background-color: #ff7700; /* Mantenuto il colore originale del pulsante */
     color: white;
     padding: 18px 20px;
     margin-top: 10px;
@@ -165,4 +165,15 @@ input[type="password"] {
 .forgot-pass {
     text-align: center;
     display: block;
+}
+
+/* Aggiunta una media query per adattarsi a dispositivi più piccoli */
+@media only screen and (max-width: 600px) {
+    #logo {
+        width: 70%;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
