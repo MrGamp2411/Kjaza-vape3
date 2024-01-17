@@ -155,32 +155,34 @@ input[type="password"] {
     text-align: center;
     display: block;
 }
-@media only screen and (max-width: 600px) {
-    body {
-        height: auto;
-    }
 
-    .main {
-        border-radius: 0;
-        box-shadow: none;
-    }
+/* Il tuo stile CSS originale rimane qui */
 
-    .main span {
-        display: none;
-    }
+/* Modifiche per migliorare la mobile friendliness */
+body {
+    height: auto;
+}
 
-    .card {
-        width: 80%;
-        margin: 0 auto;
-    }
+.main {
+    border-radius: 0;
+    box-shadow: none;
+}
 
-    input[type="text"],
-    input[type="password"] {
-        padding: 10px 15px;
-    }
+.main span {
+    display: none;
+}
 
-    .cta-btn {
-        padding: 14px 15px;
-        border-radius: 8px;
-    }
+.card {
+    width: 80%;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px 15px;
+}
+
+.cta-btn {
+    padding: 14px 15px;
+    border-radius: 8px;
 }
