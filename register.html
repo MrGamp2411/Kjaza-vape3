@@ -24,7 +24,7 @@
 
         .subtitle {
             text-align: center;
-            color: black; /* Cambiato da 'white' a 'black' */
+            color: black;
         }
     </style>
 </head>
@@ -43,25 +43,51 @@
         <span></span>
         <span></span>
         <div class="card">
-            <form>
+            <form id="registrationForm">
                 <h2 class="title">Registrazione</h2>
                 <p class="subtitle">Already have an account? <a href="login.html">Log In</a></p>
                 <br />
                 <div class="email-login">
                     <label>Email</label>
-                    <input type="text" placeholder="Enter Email">
+                    <input type="text" id="emailInput" placeholder="Enter Email">
                     <label>Password</label>
-                    <input type="password" placeholder="Enter Password">
-                    <!-- Aggiungi un campo per confermare la password -->
-                    <label>Confirm Password</label>
-                    <input type="password" placeholder="Confirm Password">
+                    <input type="password" id="passwordInput" placeholder="Enter Password">
+                    <label>Conferma Password</label>
+                    <input type="password" id="confirmPasswordInput" placeholder="Confirm Password">
                 </div>
-                <button class="cta-btn">
-                    Registrati
-                </button>
+                <button type="button" class="cta-btn" id="registerButton">Registrati</button>
             </form>
         </div>
     </div>
+
+    <!-- Includi i file di Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- Configurazione di Firebase -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCSH0yUzb3QLXgM6vf_eUCQpnibg-Po-as",
+            authDomain: "prova-kjazavape.firebaseapp.com",
+            projectId: "prova-kjazavape",
+            storageBucket: "prova-kjazavape.appspot.com",
+            messagingSenderId: "236654546011",
+            appId: "1:236654546011:web:30197308ef656ccc53437e",
+            measurementId: "G-4V4NYSF8GB"
+        };
+
+        // Inizializzazione di Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
+
+    <!-- Altri script inclusi -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    
+    <!-- Il tuo script custom.js -->
+    <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
 
