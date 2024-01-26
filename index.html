@@ -74,11 +74,10 @@
                       Shop </a> </li>
                   <li class="nav-item"> <a class="nav-link" href="contact.html">Contact
                       us</a> </li>
-                  <li class="nav-item"> <a class="nav-link" href="login.html">Login</a>
-                  </li>
-    <li class="nav-item">
-      <button class="nav-link logout-button" id="logoutButton" onclick="logout()" style="border: none; background-color: transparent;">Logout</button>
-    </li>
+<li id="loginButton" class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+<li id="logoutButton" class="nav-item" style="display: none;">
+    <button class="nav-link logout-button" onclick="logout()" style="border: none; background-color: transparent;">Logout</button>
+</li>
                 </ul>
               </div>
               <div class="quote_btn-container "> <a href=""> <img src="images/cart.png"
@@ -452,6 +451,7 @@
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/logout.js"></script>
+<script src="js/uiManager.js"></script>
 
   </body>
 </html>
