@@ -37,4 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
     if (loginButton) {
         loginButton.addEventListener("click", login);
     }
+
+    // Aggiungi un event listener per il cambio di stato dell'autenticazione (utente loggato o non loggato)
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // L'utente è loggato
+            showProfilePanel(user.email);
+        } else {
+            // L'utente non è loggato
+            hideProfilePanel();
+        }
+    });
+
+    // Funzione per mostrare il pannello del profilo
+    function showProfilePanel(email) {
+        // Modifica qui per adattare il tuo layout del pannello del profilo
+        console.log("L'utente è loggato:", email);
+        // Mostra elementi del pannello del profilo, ad esempio, un div con l'ID "profilePanel"
+    }
+
+    // Funzione per nascondere il pannello del profilo
+    function hideProfilePanel() {
+        // Modifica qui per adattare il tuo layout del pannello del profilo
+        console.log("L'utente non è loggato.");
+        // Nascondi elementi del pannello del profilo, ad esempio, il div con l'ID "profilePanel"
+    }
 });
