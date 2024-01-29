@@ -1,0 +1,28 @@
+/* cart.css */
+
+/* Aggiungi qui le tue regole CSS per la pagina del carrello */
+
+/* Footer Section */
+.footer_section {
+    padding: 15px 0;
+    text-align: center;
+    background: #151414;
+    color: #fff;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Messaggio Carrello Vuoto */
+#empty-cart-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #333;
+}

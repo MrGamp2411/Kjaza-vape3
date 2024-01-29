@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan%7CPoppins:400,600,700&amp;display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+</head>
+<body class="sub_page">
+    <div class="hero_area">
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="" style="width: 30%; height: 30%;">&nbsp;
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item active"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="shop.html">Shop </a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="contact.html">Contact us</a> </li>
+                                <li id="loginButton" class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                <li id="logoutButton" class="nav-item" style="display: none;">
+                                    <button class="nav-link logout-button" onclick="logout()" style="border: none; background-color: transparent;">Logout</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="quote_btn-container "> <a href=""> <img src="images/cart.png" alt="">
+                            <div class="cart_number"> 0 </div>
+                        </a>
+                            <form class="form-inline"> <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button> </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <!-- Sezione del carrello -->
+    <div class="item_section layout_padding2">
+        <div class="container">
+            <div class="item_container">
+                <h1>Your Shopping Cart</h1>
+
+                <!-- Aggiungi una sezione per visualizzare i prodotti nel carrello -->
+                <div id="cart-items" class="item_container">
+                    <!-- Questo div verrà popolato dinamicamente con i prodotti nel carrello -->
+                </div>
+
+                <!-- Mostra un messaggio se il carrello è vuoto -->
+                <div id="empty-cart-message" class="text-center">
+                    Your shopping cart is empty.
+                </div>
+
+                <!-- Altri elementi del carrello o stili, se necessario -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Altre sezioni o elementi della pagina, se necessario -->
+
+    <section class="container-fluid footer_section fixed-bottom">
+        <p> © <span id="displayYear"></span> All Rights Reserved By <a href="https://html.design/">Free Html Templates</a> </p>
+    </section>
+
+    <script type="text/javascript" src="js/cart.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
