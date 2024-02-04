@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KJAZA - Registrazione</title>
     <link rel="stylesheet" type="text/css" href="css/login.css" />
+
+    <!-- Includi i file di Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- Includi il file di connessione a Firebase -->
+    <script type="text/javascript" src="js/firebaseConnection.js"></script>
+
     <style>
         header {
             position: fixed;
@@ -52,35 +61,13 @@
                     <input type="text" id="emailInput" placeholder="Enter Email">
                     <label>Password</label>
                     <input type="password" id="passwordInput" placeholder="Enter Password">
-                    <label>Conferma Password</label>
+                    <label>Confirm Password</label>
                     <input type="password" id="confirmPasswordInput" placeholder="Confirm Password">
                 </div>
                 <button type="button" class="cta-btn" id="registerButton">Registrati</button>
             </form>
         </div>
     </div>
-
-    <!-- Includi i file di Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-
-    <!-- Configurazione di Firebase -->
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCSH0yUzb3QLXgM6vf_eUCQpnibg-Po-as",
-            authDomain: "prova-kjazavape.firebaseapp.com",
-            projectId: "prova-kjazavape",
-            storageBucket: "prova-kjazavape.appspot.com",
-            messagingSenderId: "236654546011",
-            appId: "1:236654546011:web:30197308ef656ccc53437e",
-            measurementId: "G-4V4NYSF8GB"
-        };
-
-        // Inizializzazione di Firebase
-        firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-    </script>
 
     <!-- Includi il tuo script register.js -->
     <script type="text/javascript" src="js/register.js"></script>

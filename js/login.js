@@ -1,6 +1,12 @@
 // File: login.js
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Aggiungi un event listener al pulsante di login
+    var loginButton = document.getElementById("loginButton");
+    if (loginButton) {
+        loginButton.addEventListener("click", login);
+    }
+
     // Funzione per effettuare il login con Firebase
     function login() {
         var email = document.getElementById("emailInput").value;
@@ -30,12 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Errore durante il login:", errorCode, errorMessage);
                 alert("Errore durante il login: " + errorMessage);
             });
-    }
-
-    // Aggiungi un event listener al pulsante di login
-    var loginButton = document.getElementById("loginButton");
-    if (loginButton) {
-        loginButton.addEventListener("click", login);
     }
 
     // Aggiungi un event listener per il cambio di stato dell'autenticazione (utente loggato o non loggato)
