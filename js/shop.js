@@ -3,13 +3,21 @@
 // Funzione per aggiungere un prodotto al carrello
 function addToCart(productName, price) {
   const cart = getCart();
-  cart.push({
-    productName: productName,
-    price: price,
-    quantity: 1
-  });
-  saveCart(cart);
+  const existingProductIndex = cart.findIndex(product => product.productName === productName);
 
-  // Chiamata alla funzione per aggiornare il numero di elementi nel carrello
+  if (existingProductIndex !== -1) {
+    // Il prodotto è già nel carrello, aumenta la quantità
+    cart[existingProductIndex].quantity++;
+  } else {
+    // Il prodotto non è nel carrello, aggiungilo
+    cart.push({
+      productName: productName,
+      price: price,
+      quantity: 1,
+      // Aggiungi qui eventuali altre proprietà del prodotto
+    });
+  }
+
+  saveCart(cart);
   updateCartNumber();
 }
